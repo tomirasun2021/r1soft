@@ -2,6 +2,7 @@
 - name: Installs r1soft agent
   become: yes 
   become_method: sudo 
+  user: centos
   hosts: agent
   tasks: 
     
@@ -31,7 +32,7 @@
       
   
   - name: Get key 
-    command: "r1soft-setup --get-key  http://3.84.5.130:8080"
+    command: "r1soft-setup --get-key  http://18.206.147.229:8080"
     ignore_errors: true
   
   
